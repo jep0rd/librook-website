@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c2202da5ec.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Checkout</title>
+</head>
+<body>
+  <form action="#">
+  <header class="page-header flex">
+    <a href="/index.html" class="logo">LiBrook</a>
+    <span class="page-title">CHECKOUT FORM</span>
+  </header>
+  <section class="form-body flex">
+    <main class="main-form flex">
+      <span class="header">Billing information</span>
+      <section class="information-div name flex">
+        <div class="first-name flex">
+          <label for="firstName" class="label">First name</label>
+          <input type="text" id="firstName" name="firstName" class="text-field" required>
+        </div>
+        <div class="last-name flex">
+          <label for="lastName" class="label">Last name</label>
+          <input type="text" id="lastName" name="firstName" class="text-field" required>
+        </div>
+      </section>
+      <section class="information-div email flex">
+        <div class="user-email flex">
+          <label for="userEmail" class="label">Email address</label>
+          <input type="text" id="userEmail" name="userEmail" class="text-field" placeholder="me@librook.com (optional)">
+        </div>
+        <div class="user-number flex">
+          <label for="userNumber" class="label">Phone number</label>
+          <input type="tel" id="userNumber" name="userNumber" class="text-field" placeholder="987 6543210" pattern="[9]{1}[0-9]{2} [0-9]{7}" maxlength="11" required>
+        </div>
+      </section>
+      <section class="information-div address flex">
+        <label for="user-address" class="label">Address 1</label>
+        <input type="text" id="userAddress" name="userAddress" class="text-field" placeholder="123 Dela Cruz St" required>
+      </section>
+      <section class="information-div address flex">
+        <label for="user-address" class="label">Address 2</label>
+        <input type="text" id="userAddress" name="userAddress" class="text-field" placeholder="1st flr, rm 2 (optional)">
+      </section>
+      <section class="information-div country flex">
+        <div class="user-country flex">
+          <span class="label">Country</span>
+          <select name="userCountry" id="userCountry" class="text-field" required>
+            <option disabled selected>Select here</option>
+            <option value="Philippines">Philippines</option>
+          </select>
+        </div>
+        <div class="user-province flex">
+          <span class="label">State / Province</span>
+          <select name="userProvince" id="userProvince" class="text-field" required>
+            <option disabled selected>Select here</option>
+            <option value="NCR">NCR</option>
+          </select>
+        </div>
+        <div class="user-zip flex">
+          <label for="userZip" class="label">Zip</label>
+          <input type="text" id="userZip" name="userZip" class="text-field" maxlength="4"red required>
+        </div>
+      </section>
+      <section class="information-div shipping flex">
+        <div class="shipping-address">
+          <input type="checkbox" id="shippingAddress" name="shippingAddress" value="shippingAddress">
+          <label for="shippingAddress">
+            Same as shipping address
+          </label>
+        </div>
+        <div class="shipping-address">
+          <input type="checkbox" id="saveInformation" name="saveInformation" value="saveInformation">
+          <label for="saveInformation">
+            Save this information for next time
+          </label>
+        </div>
+      </section>
+      <section class="information-div payment flex">
+        <span class="header">Payment</span>
+        <div class="user-payment flex">
+          <div class="credit-card flex">
+            <input type="radio" id="creditCard" name="userPayment" value="creditCard" checked>
+            <label for="creditCard">Credit card</label>
+          </div>
+          <div class="debit-card flex">
+            <input type="radio" id="debitCard" name="userPayment" value="debitCard">
+            <label for="debitCard">Debit card</label>
+          </div>
+          <div class="paypal flex">
+            <input type="radio" id="paypal" name="userPayment" value="paypal">
+            <label for="paypal">PayPal</label>
+          </div>
+          <div class="gcash flex">
+            <input type="radio" id="gcash" name="userPayment" value="gcash">
+            <label for="gcash">Gcash</label>
+          </div>
+        </div>
+      </section>
+      <section class="information-div submit flex">
+          <input type="submit" id="submitButton" value="COMPLETE PURCHASE">
+      </section>
+    </main>
+    <!-- summary -->
+    <aside class="summary-form flex">
+      <h2 class="flex">
+        <span class="header">Summary</span>
+        <span class="item-total flex">3</span>
+      </h3>
+      <ul class="summary-list flex">
+        <li class="summary-item flex">
+          <h3 class="item-description">First item</h3>
+          <span class="price">$25.99</span>
+        </li>
+        <li class="summary-item flex">
+          <h3 class="item-description">Second item</h3>
+          <span class="price">$25.99</span>
+        </li>
+        <li class="summary-item flex">
+          <h3 class="item-description">Third item</h3>
+          <span class="price">$19.99</span>
+        </li>
+        <li class="summary-promo flex">
+          <div class="promo flex">
+            <span class="promo-item">Promo code</span>
+            <small>SAMPLECODE</small>
+          </div>
+          <span class="promo-total">$10.00</span>
+        </li>
+        <li class="summary-item flex">
+          <span class="total">Total (USD)</span>
+          <span class="price-total">$61.97</span>
+        </li>            
+      </ul>
+      <div class="redeem-button flex">
+          <input type="text" class="promo-code" placeholder="Enter code here">
+          <input type="button" value="Redeem" class="redeem">
+      </div>
+    </aside>
+    <!-- summary end -->
+  </section>
+  <footer class="page-footer flex">
+    <div class="copyright flex">
+      <ul class="footer-link-list flex">
+        <li><a href="#" class="footer-link">Privacy</a></li>
+        <li><a href="#" class="footer-link">Terms</a></li>
+        <li><a href="#" class="footer-link">Support</a></li>
+      </ul>
+      <span class="footer-copyright">&copy; 1993-2023 LiBrook</span>
+    </div>
+  </footer>
+  </form>
+</body>
+</html>
