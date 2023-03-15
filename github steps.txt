@@ -1,0 +1,11 @@
+1. git init (initializing local repository)
+2. git add . (adding all files to the local repo)
+3. git commit -m "message here" (commiting files to local repo)
+4. git remote add origin *link* (linking the remote repo to the local repo)
+5. git push -u origin *branch* (pushing the local repo to the remote repository)
+
+
+During 2nd commit 
+1. git add . (add all the files again to update the local repo)
+2. git commit -m "2nd commit" (commits updates to local repo)
+3. git push -u origin master (push updated files to the remote repo)
